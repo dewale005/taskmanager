@@ -1,0 +1,38 @@
+# Node modules (Angular)
+frontend/node_modules/
+
+# Angular build output
+frontend/dist/
+frontend/.angular/
+frontend/.output/
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python cache and virtualenv (Django)
+backend/__pycache__/
+backend/**/*.pyc
+backend/**/*.pyo
+backend/**/*.pyd
+backend/.mypy_cache/
+backend/.pytest_cache/
+
+
+# PyInstaller
+*.spec
+
+# Env files
+*.env
+.env.*
