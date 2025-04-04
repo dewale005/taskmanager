@@ -1,5 +1,5 @@
-# LettingHub Application
-Welcome to the LettingHub Application! This document provides instructions on how to set up, run, and test the application using Docker Compose.
+# Task Manager Application
+Welcome to the Task Manager Application! This document provides instructions on how to set up, run, and test the application using Docker Compose.
 
 ## Prerequisites
 
