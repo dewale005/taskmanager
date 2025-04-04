@@ -1,0 +1,23 @@
+<div class="container" *ngFor="let status of statuses">
+  <div class="headerTitle">
+  <h2>{{ status.label }}</h2>
+  <button mat-button color="primary" (click)="openTaskForm(status.key)">
+    <mat-icon>add</mat-icon>
+    Add Task
+  </button>
+</div>
+
+  <div
+    cdkDropList
+    [cdkDropListData]="tasks[status.key]"
+    [cdkDropListConnectedTo]="connectedDropLists"
+    class="list"
+    [id]="status.key"
+    (cdkDropListDropped)="drop($event, status.key)">
+    
+    <div class="list-item" *ngFor="let item of tasks[status.key]" cdkDrag>
+      <app-task-item [task]="item" [users]="users"></app-task-item>
+    </div>
+  </div>
+    
+</div>

@@ -1,0 +1,22 @@
+.row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .col {
+    flex: 1;
+  }
+
+  .error-message {
+    margin-top: 10px;
+    color: #f44336;
+    font-size: 14px;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+
+  .options {
+    text-transform: capitalize;
+  }

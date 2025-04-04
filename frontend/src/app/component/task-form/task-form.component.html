@@ -1,0 +1,78 @@
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+    <mat-card class="shipping-card">
+      <mat-card-header>
+        <mat-card-title>{{ title }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+  
+        <!-- Title -->
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Title</mat-label>
+              <input matInput formControlName="title" placeholder="Title">
+              <mat-error *ngIf="taskForm.controls['title'].hasError('required')">
+                Title is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+  
+        <!-- Description -->
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Description</mat-label>
+              <textarea matInput formControlName="description" placeholder="Description"></textarea>
+                <mat-error *ngIf="taskForm.controls['description'].hasError('required')">
+                    Description is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+  
+        <!-- Due Date -->
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Due Date</mat-label>
+              <input matInput [matDatepicker]="picker" formControlName="due_date" placeholder="Due date">
+              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+        </div>
+  
+        <!-- Priority -->
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Priority</mat-label>
+              <mat-select formControlName="priority">
+                <mat-option *ngFor="let element of priority" [value]="element.value">{{ element.label }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+  
+        <!-- Assigned To -->
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Assigned To</mat-label>
+              <mat-select formControlName="assigned_to_id" class="options">
+                <mat-option *ngFor="let user of data.users" [value]="user.id"  class="options">{{ user.username }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+  
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" type="submit">
+          Submit
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+  

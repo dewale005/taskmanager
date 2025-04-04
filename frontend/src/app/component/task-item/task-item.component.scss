@@ -1,0 +1,103 @@
+.task-card {
+  padding: 0;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  max-width: 320px;
+}
+
+.card-content {
+  display: flex;
+  padding: 12px;
+}
+
+
+.priority-bar {
+  width: 5px;
+}
+.priority-bar.high {
+    background-color: #f44336;
+}
+
+.priority-bar.normal {
+    background-color: #2196f3;
+}
+.priority-bar.low {
+    background-color: #e2c647;
+}
+
+
+
+.card-main {
+  padding-left: 12px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+
+  .title {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+    flex: 1;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    color: #adadad;
+    margin-top: 2px;
+  }
+
+  .edit-btn {
+    padding: 0;
+    margin-left: 8px;
+    height: 24px;
+    width: 24px;
+  }
+}
+
+.meta {
+  display: flex;
+  text-transform: capitalize;
+  gap: 8px;
+  font-size: 12px;
+  color: #888;
+
+  .priority.high {
+    color: #f44336;
+    font-weight: 500;
+  }
+
+    .priority.normal {
+        color: #2196f3;
+    }   
+    .priority.low {
+        color: #e2c647;
+    }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  font-size: 13px;
+  color: #444;
+
+  .avatar {
+    background-color: #2196f3;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

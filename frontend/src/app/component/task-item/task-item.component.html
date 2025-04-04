@@ -1,0 +1,32 @@
+
+<mat-card class="task-card">
+    <div class="card-content">
+      <div class="priority-bar" [ngClass]="{'high': task.priority === 'high', 'normal': task.priority === 'normal', 'low': task.priority === 'low'}"></div>
+  
+      <div class="card-main">
+        <div class="card-header">
+            <div>
+                <div class="title">{{ task.title }}</div>
+                <div class="subtitle">{{ task.description }}</div>
+                <div class="meta">
+                    <span class="priority" [ngClass]="{'high': task.priority === 'high', 'normal': task.priority === 'normal', 'low': task.priority === 'low'}">
+                        {{ task.priority }}
+                    </span>
+                    <span class="date">{{ task.due_date | date:'mediumDate' }}</span>
+                </div>
+            </div>
+          
+          <button mat-icon-button class="edit-btn" (click)="openBottomSheet()">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </div>
+  
+        <div class="footer">
+          <span class="customer">{{ task.assigned_to.username }}</span>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+  
+  
+  
